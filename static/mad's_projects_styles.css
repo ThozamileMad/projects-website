@@ -1,0 +1,195 @@
+body {
+	margin: auto;
+	text-align: center
+}
+
+h2 {
+	margin-top: 5%;
+	color: #1D5B79;
+}
+
+hr {
+	margin: 7% 20%;
+}
+
+a {
+	text-decoration: none;
+}
+
+/** Title Section **/
+#title-s { 
+	background-color: #1D5B79;
+	color: white;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+.navbar {
+	padding-left: 35%;
+}
+
+.nav-item {
+	margin-right: 10%;
+}
+
+.nav-link {
+	color: white;
+}
+
+.title-img {
+	margin: 5% auto;
+	width: 20%;
+}
+
+.title-h {
+	margin-top: 1%;
+	font-size: 700%;
+}
+
+/** Language Section **/
+.d-block {
+	margin: 5% auto 5% 36%;
+	width: 28%;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/507/507257.png);
+}
+
+.carousel-control-next-icon {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/271/271226.png);
+}
+
+
+
+/** Main Section **/
+
+.cat-row {
+	margin: 5% auto;
+}
+
+.cat-col {
+	margin: auto;
+}
+
+.cat-a {
+	color: black;
+}
+
+.cat-a:hover {
+	color: #1D5B79;
+}
+
+.cat-img {
+	width: 60%;
+}
+
+.cat-h {
+	margin-top: 7%;
+}
+
+.cat-p {
+	color: grey;
+}
+
+/** Contact Section **/
+form {
+	padding-right: 15%;
+    padding-left: 15%;
+	margin-top: 5%;
+}
+
+label {
+	color: black;
+}
+
+.form-control {
+	margin: 1% auto 2% auto;
+	border-color: grey;
+}
+
+.btn {
+	margin-bottom: 5%; 
+	background-color: #1D5B79;
+	color: white;
+}
+
+.btn:hover {
+	color: white;
+	background-color: black;
+}
+
+.help-block {
+	color: red;
+}
+
+/** Socials Section **/
+
+.footer-imgs {
+	 margin: 5% auto 4% auto;
+} 
+
+.footer-imgs img {
+	width: 10%;
+}
+
+.middle-footer-img {
+	margin: auto 4%;
+}
+
+@media (max-width: 499px) {
+	/** Title Section **/
+	.navbar {
+		padding-left: 0
+	}
+
+	.navbar-toggler {
+		margin-left: 42%;
+	}
+	
+	.navbar-nav {
+		padding-left: 6%;
+	}
+	
+	.title-h {
+		font-size: 70px;
+	}
+
+	.title-img {
+		width: 30%;
+	}
+
+	/** Main Section **/ 
+	.cat-col {
+		margin-bottom: 15%;
+	}
+
+	.data-science-cat-col {
+		margin: auto;
+	}
+
+	/** Contact Section **/
+    form {
+        padding-right: 7%;
+        padding-left: 7%;
+    }
+
+	/** Socials Section **/
+    .footer-imgs img {
+        width: 17%;
+    }
+}
+
+@media (max-width:1025px) and (min-width:500px) {
+	/** Title Section **/
+	.navbar {
+		padding-left: 0
+	}
+
+	.navbar-toggler {
+		margin-left: 46%;
+	}
+	
+	.navbar-nav {
+		padding-left: 8%;
+	}
+}

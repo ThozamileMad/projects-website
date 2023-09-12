@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1">
+    		<title>Mad's Projects</title>    
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+		<!-- Bootstrap Stylesheets and Scripts -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Mad's Stylesheets and Scripts -->
+		<link rel="stylesheet" href="static/mad's_projects_styles.css">
+
+  	</head>
+	<body>
+		<section id="title-s">
+			<nav class="navbar navbar-expand-lg">
+  				<div class="container-fluid">
+    					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      						<span class="navbar-toggler-icon"></span>
+    					</button>
+    					<div class="collapse navbar-collapse" id="navbarNav">
+     	        				<ul class="navbar-nav">
+        						<li class="nav-item">
+          							<a class="nav-link" href="#languages-s">Languages</a>
+        						</li>
+        						<li class="nav-item">
+          							<a class="nav-link" href="#main-s">PyProjects</a>
+        						</li>
+        						<li class="nav-item">
+          							<a class="nav-link" href="#contact-s">Contact</a>
+        						</li>
+        						<li class="nav-item">
+          							<a class="nav-link" href="#socials-s">Socials</a>
+        						</li>
+      						</ul>
+    					</div>
+  				</div>
+			</nav>
+
+
+			<div class="title-div">
+      				<h1 class="title-h"> Mad's <br> Py Projects </h1>
+      				<img class="title-img" src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png"> 
+			</div>
+		</section>
+
+		<section id="languages-s">
+			<h2> Languages </h2>
+			<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  				<div class="carousel-inner">
+    					<div class="carousel-item active">
+      						<img src="https://cdn-icons-png.flaticon.com/512/180/180867.png" class="d-block" alt="...">
+    					</div>
+    					<div class="carousel-item">
+      						<img src="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" class="d-block" alt="...">
+    					</div>
+    					<div class="carousel-item">
+      						<img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" class="d-block" alt="...">
+    					</div>
+					<div class="carousel-item">
+      						<img src="https://cdn-icons-png.flaticon.com/512/1199/1199124.png" class="d-block" alt="...">
+    					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    						<span class="visually-hidden">Previous</span>
+  					</button>
+  					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    						<span class="visually-hidden">Next</span>
+ 					 </button>
+  				</div>
+			</div>
+		</section>
+		<hr>
+		<section id="main-s">
+			<h2> Projects </h2>
+			{% for dict in cat_data: %}
+				<div class="container text-center">
+  					<div class="cat-row row">
+						{% for key in dict: %}
+							{% if key != "data_science": %}
+    								<div class="cat-col col-lg-4 col-md-4">
+									<a class="cat-a" href="#">
+      										<img class="cat-img" src="{{ dict[key][0] }}">
+										<h3 class="cat-h"> {{ dict[key][1] }} </h3>
+										<p class="cat-p"> {{ dict[key][2] }} </p>
+									</a>	
+    								</div>
+							{% else: %}
+								<div class="data-science-cat-col cat-col col-lg-4 col-md-4">
+									<a class="cat-a" href="#">
+      										<img class="cat-img" src="{{ dict[key][0] }}">
+										<h3 class="cat-h"> {{ dict[key][1] }} </h3>
+										<p class="cat-p"> {{ dict[key][2] }} </p>
+									</a>	
+    								</div>
+						
+							{% endif %}
+						{% endfor %}
+  					</div>
+				</div>
+			{% endfor %}
+		</section>
+		<hr>
+		<section id="contact-s">
+			{% import "bootstrap/wtf.html" as wtf %}
+			
+			<h2> Contact Me </h2>
+			{{ wtf.quick_form(form, novalidate=True) }}
+			{{ wtf.form_errors(form, hiddens="only") }}
+		</section>
+		<hr>
+		<section id="socials-s">
+			<h2 class="footer-h"> Socials </h2>
+			<footer>
+				<p class="footer-imgs">
+					<a href="#"> <img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png"> </a>
+					<span> <a href="#"> <img class="middle-footer-img" src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png"> </a>
+					<span> <a href="#"> <img src="https://cdn-icons-png.flaticon.com/512/1384/1384017.png"> </a>
+				</p>
+			        <p class="footer-p"> @Copyright © {{ current_year }} All rights reserved. </p>
+			</footer>
+		</section>
+ 	</body>
+</html>
